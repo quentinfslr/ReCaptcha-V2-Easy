@@ -1,13 +1,13 @@
 <?php
+
 include './ReCaptcha.php';
 
 if (isset($_POST["Submit"])) {
-    //Call function check validate
-    if (ReCaptchaValidate()) {
+    //Call func tion check validate
+    if (ReCaptchaValidate())
         echo "validate";
-    } else {
+    else
         echo "invalidate";
-    }
 }
 ?>
 <!doctype html>
@@ -18,7 +18,7 @@ if (isset($_POST["Submit"])) {
     </head>
     <body>
         <form action="#" method="POST">
-<?php ReCaptcha(); ?>
+            <?php ReCaptcha(); ?>
             <input type="submit" value="Submit" name="Submit" />
         </form>
     </body>
