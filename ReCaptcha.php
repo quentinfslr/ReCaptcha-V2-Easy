@@ -1,5 +1,5 @@
 <?php
-//Cles 
+//Key Google  Recover key -> https://www.google.com/recaptcha/admin#list
 $KeySite = "";
 $KeySecret = "";
 
@@ -11,8 +11,11 @@ function ReCaptcha() {
     </div> <br/> 
     <?php
 }
-
-function ReCaptchaValider() {
+/*
+ *  Check Validate ReCaptcha
+ * ! form action POST
+*/
+function ReCaptchaValidate() {
     global $KeySecret;
 
     //Parameter returned by the recaptcha

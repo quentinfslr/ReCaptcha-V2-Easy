@@ -3,7 +3,7 @@ include './ReCaptcha.php';
 
 if (isset($_POST["Submit"])) {
     //Call function check validate
-    if (ReCaptchaValider()) {
+    if (ReCaptchaValidate()) {
         echo "validate";
     } else {
         echo "invalidate";
