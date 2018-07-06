@@ -4,10 +4,10 @@ $KeySite = "";
 $KeySecret ="";
 
 function ReCaptcha() {
-    global $KeyGoogle;
+    global $KeySite;
     ?>
  <script src = "https://www.google.com/recaptcha/api.js" async defer ></script>
-    <div class = "g-recaptcha" data-sitekey ="<?=$KeyGoogle?>" >
+    <div class = "g-recaptcha" data-sitekey ="<?=$KeySite?>" >
     </div> <br/> 
     <?php
 }
