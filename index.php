@@ -1,3 +1,15 @@
+<?php
+include './ReCaptcha.php';
+
+if (isset($_POST["Submit"])) {
+    //Call function check validate
+    if (ReCaptchaValider()) {
+        echo "validate";
+    } else {
+        echo "invalidate";
+    }
+}
+?>
 <!doctype html>
 <html>
     <head>
@@ -5,6 +17,9 @@
         <title>ReCaptcha V2 Easy</title>  
     </head>
     <body>
-
+        <form action="#" method="POST">
+<?php ReCaptcha(); ?>
+            <input type="submit" value="Submit" name="Submit" />
+        </form>
     </body>
 </html>
