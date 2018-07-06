@@ -11,6 +11,7 @@ function ReCaptcha() {
     </div> <br/> 
     <?php
 }
+
 /*
  *  Check Validate ReCaptcha
  * ! form action POST
@@ -21,17 +22,15 @@ function ReCaptchaValidate() {
     //Parameter returned by the recaptcha
     $Reply = $_POST['g-recaptcha-response'];
     //We recover the IP
-    $remoteip = $_SERVER['REMOTE_ADDR'];
-    
+    $remoteip = $_SERVER['REMOTE_ADDR'];    
 
     $api_url = "https://www.google.com/recaptcha/api/siteverify?secret=".$KeySecret. "&response=".$Reply."&remoteip=".$remoteip;
     $decode = json_decode(file_get_contents($api_url), true);
 
-    //Check Reply
+    //Check Reply 
     if ($decode['success'] == true)
         return true;
      else 
-        return false;
- 
+        return false; 
 }
 ?>
